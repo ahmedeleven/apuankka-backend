@@ -8,7 +8,10 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from .models import UserProfile
+from .models import Service
 from .serializers import UserProfileSerializer
+from .serializers import ServiceSerializer
+from .serializers import UserSerializer
 #import requests
 
 # Create your views here.
@@ -80,18 +83,36 @@ def user_profile(request):
 
 @api_view(['PUT'])
 @permission_classes([IsAuthenticated])
-def update_user_profile(request, username):  # Include 'username' as a parameter
+def update_user_profile(request, username):
     try:
-        user = User.objects.get(username=username)
-    except User.DoesNotExist:
-        return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
+        user_profile = UserProfile.objects.get(user__username=username)
+    except UserProfile.DoesNotExist:
+        # If UserProfile doesn't exist, create it
+        user_profile = UserProfile(user=request.user)
 
     # Check if the authenticated user is the same as the one being updated
-    if request.user != user:
+    if request.user != user_profile.user:
         return Response({'error': 'Unauthorized'}, status=status.HTTP_401_UNAUTHORIZED)
 
-    serializer = UserProfileSerializer(user, data=request.data)
+    serializer = UserProfileSerializer(user_profile, data=request.data)
+    
     if serializer.is_valid():
         serializer.save()
-        return Response({'message': 'User profile updated successfully'})
+        return Response({'message': 'User profile updated successfully', 'user_id': serializer.data['user_id']})
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def add_service(request):
+    data = request.data
+    #return Response({"message":request.user.id})
+    serializer = ServiceSerializer(data=data, context={'request': request})
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data)
+    else:
+        return Response(serializer.errors)
