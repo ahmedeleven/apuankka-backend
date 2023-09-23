@@ -109,10 +109,32 @@ def update_user_profile(request, username):
 @permission_classes([IsAuthenticated])
 def add_service(request):
     data = request.data
-    #return Response({"message":request.user.id})
     serializer = ServiceSerializer(data=data, context={'request': request})
     if serializer.is_valid():
         serializer.save()
         return Response(serializer.data)
     else:
         return Response(serializer.errors)
+
+
+
+
+@api_view(['PUT'])
+@permission_classes([IsAuthenticated])
+def update_service(request, service_id):
+    try:
+        service = Service.objects.get(id = service_id)
+        #return Response({'message': request.user.id})
+    except Service.DoesNotExist:
+        return Response({'error': 'Service does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
+
+    if request.user.id != service.user.id:
+        return Response({'error': 'Unauthorized'}, status=status.HTTP_401_UNAUTHORIZED)
+    else:
+        serializer = ServiceSerializer(service, data=request.data, context={'request': request})
+        if serializer.is_valid():
+            serializer.save()
+            #return Response({'message': 'Service updated successfully'})
+            return Response({'message': serializer.data})
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
