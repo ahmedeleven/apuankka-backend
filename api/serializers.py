@@ -2,6 +2,7 @@ from rest_framework import serializers
 from django.contrib.auth.models import User
 from .models import UserProfile
 from .models import Service
+from .models import Interest
 from django.utils import timezone
 
 
@@ -35,3 +36,10 @@ class ServiceSerializer(serializers.ModelSerializer):
         validated_data['date'] = timezone.now().date()
         service = Service.objects.create(**validated_data)
         return service
+
+
+
+class InterestSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Interest
+        fields = ('id', 'user', 'service', 'chosen')

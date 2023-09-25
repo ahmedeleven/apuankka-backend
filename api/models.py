@@ -21,3 +21,13 @@ class Service(models.Model):
 
     def __str__(self):
         return self.title
+
+
+
+class Interest(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    service = models.ForeignKey(Service, on_delete=models.CASCADE)
+    chosen = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"Interest {self.id} by {self.user.username} for Service {self.service.id}"

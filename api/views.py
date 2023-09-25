@@ -9,9 +9,12 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse
 from .models import UserProfile
 from .models import Service
+from .models import Interest
 from .serializers import UserProfileSerializer
 from .serializers import ServiceSerializer
 from .serializers import UserSerializer
+from .serializers import InterestSerializer
+
 from django.utils import timezone
 
 #import requests
@@ -188,3 +191,75 @@ def get_service(request, id):
     service = Service.objects.get(id=id)
     serializer = ServiceSerializer(service, context={'request': request})
     return Response(serializer.data)
+
+
+
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def add_interest(request, service_id):
+    try:
+        service = Service.objects.get(id=service_id)
+    except Service.DoesNotExist:
+        return Response({'error': 'Service does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
+    if service.user == request.user:
+        return Response({"message":"You are not allowed to show interest to your own service"}, status=status.HTTP_400_BAD_REQUEST)
+    else:
+        interest, created = Interest.objects.get_or_create(user=request.user, service=service)
+    
+        if not created:
+            return Response({'message': 'You have already expressed interest in this service.'})
+
+        return Response({'message': 'Interest added successfully'}) 
+
+
+
+
+
+@api_view(['PUT'])
+@permission_classes([IsAuthenticated])
+def update_interest(request, service_id, user_id):
+    try:
+        service = Service.objects.get(id=service_id)
+        #return Response({'id':service.id, 'user':service.user.id, 'logged':request.user.id, 'title': service.title})
+    except Service.DoesNotExist:
+        return Response({'error': 'Service does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
+
+
+    try:
+        interest = Interest.objects.get(service_id=service_id,user_id=user_id)
+        #return Response({'user':interest.user.id, 'service':interest.service.id})
+    except:
+        return Response({'error': 'There is no interest with the user specified to the service specified'}, status=status.HTTP_404_NOT_FOUND)
+
+
+    if service.user != request.user:
+        return Response({"message":"You are not allowed to update interests related to this service"}, status=status.HTTP_400_BAD_REQUEST)
+    else:
+        serializer = InterestSerializer(interest, data=request.data, partial=True, context={'request': request})
+        if serializer.is_valid():
+            serializer.save()
+            return Response({'message': serializer.data})
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_service_interests(request,service_id):
+    service = Service.objects.get(id=service_id)
+    if service.user == request.user:
+        interests = Interest.objects.get(service_id=service_id)
+        serializer = InterestSerializer(interests, context={'request',request})
+        return Response(serializer.data)
+    else:
+        return Response({"message": "You are not allowed to display interests of this service"})
+
+
+    

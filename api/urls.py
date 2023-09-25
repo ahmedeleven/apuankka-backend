@@ -15,4 +15,7 @@ urlpatterns = [
 	path('services/update/<str:service_id>/', views.update_service, name='update_service'),
 	path('services/<int:id>/', views.get_service, name='get_service'),
 	path('services/user/<int:user_id>/', views.get_user_services, name='get_user_service'),
+	path('interests/service/<int:service_id>/add/', views.add_interest, name='add_interest'),
+	path('interests/service/<int:service_id>/user/<int:user_id>/update/', views.update_interest, name='update_interest'),
+	path('interests/service/<int:service_id>/', views.get_service_interests, name='get_service_interests'),
 ]
