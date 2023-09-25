@@ -12,6 +12,8 @@ from .models import Service
 from .serializers import UserProfileSerializer
 from .serializers import ServiceSerializer
 from .serializers import UserSerializer
+from django.utils import timezone
+
 #import requests
 
 # Create your views here.
@@ -132,9 +134,57 @@ def update_service(request, service_id):
     if request.user.id != service.user.id:
         return Response({'error': 'Unauthorized'}, status=status.HTTP_401_UNAUTHORIZED)
     else:
-        serializer = ServiceSerializer(service, data=request.data, context={'request': request})
+        data = request.data.copy()
+        data['modified'] = timezone.now().date()
+        serializer = ServiceSerializer(service, data=data, context={'request': request})
         if serializer.is_valid():
             serializer.save()
             #return Response({'message': 'Service updated successfully'})
             return Response({'message': serializer.data})
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_services(request):
+    status = request.query_params.get('status')
+    if status:
+        services = Service.objects.filter(status=status)
+    else:
+        services = Service.objects.all()
+    
+    serializer = ServiceSerializer(services, many=True, context={'request': request})
+    return Response(serializer.data)
+
+
+'''@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_services_by_status(request, status):
+    services = Service.objects.filter(status=status)
+    serializer = ServiceSerializer(services, many=True, context={'request': request})
+    return Response(serializer.data)'''
+
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_user_services(request, user_id):
+    status = request.query_params.get('status')
+    if status:
+        services = Service.objects.filter(status=status, user=user_id)
+    else:
+        services = Service.objects.filter(user=user_id)
+    
+    serializer = ServiceSerializer(services, many=True, context={'request': request})
+    return Response(serializer.data)
+
+
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_service(request, id):
+    service = Service.objects.get(id=id)
+    serializer = ServiceSerializer(service, context={'request': request})
+    return Response(serializer.data)

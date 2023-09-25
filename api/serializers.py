@@ -24,10 +24,11 @@ class UserSerializer(serializers.ModelSerializer):
 
 class ServiceSerializer(serializers.ModelSerializer):
     user = serializers.PrimaryKeyRelatedField(read_only=True, default=serializers.CurrentUserDefault())
+    #user = UserSerializer()
 
     class Meta:
         model = Service
-        fields = ('id','title','description','date','modified','user')
+        fields = ('id','title','description','date','modified','fee','status','user')
 
     def create(self, validated_data):
         validated_data['user'] = self.context['request'].user

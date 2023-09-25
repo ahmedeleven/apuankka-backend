@@ -16,6 +16,8 @@ class Service(models.Model):
     description = models.TextField(null=True)
     date = models.DateField(null=True)
     modified = models.DateField(null=True)
+    fee = models.IntegerField(default=0)
+    status = models.CharField(max_length=20,default="open")
 
     def __str__(self):
         return self.title

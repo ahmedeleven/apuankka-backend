@@ -9,6 +9,10 @@ urlpatterns = [
 	path('login/', views.login_user, name='login'),
 	path('profile/', views.user_profile, name='profile'),
 	path('profile/<str:username>/update/', views.update_user_profile, name='update_user_profile'),
+	path('services/', views.get_services, name='get_services'),
+	#path('services/?status=<str:status>', views.get_services_by_status, name='get_services_by_status'),
 	path('services/add/', views.add_service, name='add_service'),
 	path('services/update/<str:service_id>/', views.update_service, name='update_service'),
+	path('services/<int:id>/', views.get_service, name='get_service'),
+	path('services/user/<int:user_id>/', views.get_user_services, name='get_user_service'),
 ]
