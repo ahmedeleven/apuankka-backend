@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_framework.pagination',
     'api',
+    'corsheaders',
 ]
 
 
@@ -61,6 +62,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -162,3 +164,11 @@ LOGGING = {
         'level': 'DEBUG',  # Adjust the logging level as needed
     },
 }
+
+
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://localhost:3001",  # Allow requests from your frontend running locally
+    "http://example.com",    # Allow requests from your production frontend
+]

@@ -25,9 +25,6 @@ from django.utils import timezone
 
 
 
-
-
-
 @api_view(['POST'])
 def register_user(request):
     username = request.data.get('username')
@@ -40,10 +37,26 @@ def register_user(request):
     try:
         user = User.objects.create_user(username=username, password=password, email=email)
     except Exception as e:
-        return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({'error': str(e), 'username': username}, status=status.HTTP_400_BAD_REQUEST)
 
+    # Get the user's ID and username
+    user_id = user.id
+    username = user.username
+
+    # Generate or retrieve the authentication token
     token, _ = Token.objects.get_or_create(user=user)
-    return Response({'token': token.key}, status=status.HTTP_201_CREATED)
+
+    # Return the token, user ID, and username in the response
+    return Response({
+        'token': token.key,
+        'user_id': user_id,
+        'username': username
+    }, status=status.HTTP_201_CREATED)
+
+
+
+
+
 
 
 
@@ -56,11 +69,25 @@ def login_user(request):
     user = authenticate(request, username=username, password=password)
 
     if user is not None:
-        #login(request, user)
+        # Authenticate the user
+        login(request, user)
+
+        # Get the user's ID and username
+        user_id = user.id
+        username = user.username
+
+        # Generate or retrieve the authentication token
         token, _ = Token.objects.get_or_create(user=user)
-        return Response({'token': token.key}, status=status.HTTP_200_OK)
+
+        # Return the token, user ID, and username in the response
+        return Response({
+            'token': token.key,
+            'user_id': user_id,
+            'username': username
+        }, status=status.HTTP_200_OK)
 
     return Response({'error': 'Invalid credentials.'}, status=status.HTTP_401_UNAUTHORIZED)
+
 
 
 # Function to test the api

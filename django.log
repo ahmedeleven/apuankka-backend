@@ -4157,3 +4157,327 @@ Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 /home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /
+Not Found: /favicon.ico
+Unauthorized: /api/test_function/
+Watching for file changes with StatReloader
+Not Found: /login/
+Watching for file changes with StatReloader
+Not Found: /login/
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/backends.py", line 42, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/base_user.py", line 54, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 629, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 56, in login_user
+    user = authenticate(request, username=username, password=password)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/debug.py", line 56, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/__init__.py", line 77, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/backends.py", line 46, in authenticate
+    UserModel().set_password(password)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/base_user.py", line 108, in set_password
+    self.password = make_password(raw_password)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/hashers.py", line 85, in make_password
+    raise TypeError(
+TypeError: Password must be a string or bytes, got dict.
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/backends.py", line 42, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/base_user.py", line 54, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 629, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 56, in login_user
+    user = authenticate(request, username=username, password=password)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/debug.py", line 56, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/__init__.py", line 77, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/backends.py", line 46, in authenticate
+    UserModel().set_password(password)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/base_user.py", line 108, in set_password
+    self.password = make_password(raw_password)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/hashers.py", line 85, in make_password
+    raise TypeError(
+TypeError: Password must be a string or bytes, got dict.
+Not Found: /
+Method Not Allowed: /api/login/
+Not Found: /favicon.ico
+Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+  File "/home/ahmed/jupy/django_projects/src/django/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "/home/ahmed/jupy/django_projects/src/django/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/backends.py", line 42, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/base_user.py", line 54, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 629, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 56, in login_user
+    user = authenticate(request, username=username, password=password)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/debug.py", line 56, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/__init__.py", line 77, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/backends.py", line 46, in authenticate
+    UserModel().set_password(password)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/base_user.py", line 108, in set_password
+    self.password = make_password(raw_password)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/hashers.py", line 85, in make_password
+    raise TypeError(
+TypeError: Password must be a string or bytes, got dict.
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/backends.py", line 42, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/base_user.py", line 54, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 629, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 56, in login_user
+    user = authenticate(request, username=username, password=password)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/debug.py", line 56, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/__init__.py", line 77, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/backends.py", line 46, in authenticate
+    UserModel().set_password(password)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/base_user.py", line 108, in set_password
+    self.password = make_password(raw_password)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/hashers.py", line 85, in make_password
+    raise TypeError(
+TypeError: Password must be a string or bytes, got dict.
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/backends.py", line 42, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/base_user.py", line 54, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 629, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 56, in login_user
+    user = authenticate(request, username=username, password=password)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/debug.py", line 56, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/__init__.py", line 77, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/backends.py", line 46, in authenticate
+    UserModel().set_password(password)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/base_user.py", line 108, in set_password
+    self.password = make_password(raw_password)
+  File "/home/ahmed/jupy/django_projects/src/django/django/contrib/auth/hashers.py", line 85, in make_password
+    raise TypeError(
+TypeError: Password must be a string or bytes, got dict.
+Unauthorized: /api/login/
+Bad Request: /api/register/
+Bad Request: /api/register/
+Method Not Allowed: /api/register/
+Unsupported Media Type: /api/register/
+Bad Request: /api/register/
+Bad Request: /api/register/
+Bad Request: /api/register/
+Bad Request: /api/register/
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /api/register/
+Bad Request: /api/register/
+Bad Request: /api/register/
+Bad Request: /api/register/
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+  File "/home/ahmed/jupy/django_projects/src/django/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "/home/ahmed/jupy/django_projects/src/django/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /api/services/user/undefined/
+Not Found: /api/services/user/undefined/
+Not Found: /api/services/undefined/
+Not Found: /api/services/undefined/
+Not Found: /api/services/undefined/
+Not Found: /api/services/undefined/
+Not Found: /api/services/undefined/
+Not Found: /api/services/undefined/
+Not Found: /api/services/undefined/
+Not Found: /api/services/undefined/
+Not Found: /api/services/undefined/
+Not Found: /api/services/undefined/
+Not Found: /api/services/undefined/
+Not Found: /api/services/undefined/
+Not Found: /api/services/undefined/
+Not Found: /api/services/undefined/
