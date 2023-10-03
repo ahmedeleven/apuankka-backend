@@ -4481,3 +4481,2435 @@ Not Found: /api/services/undefined/
 Not Found: /api/services/undefined/
 Not Found: /api/services/undefined/
 Not Found: /api/services/undefined/
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/services/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'User' object has no attribute 'profile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 188, in get_services
+    return Response(serializer.data)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `profile` on serializer `UserSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `User` instance.
+Original exception text was: 'User' object has no attribute 'profile'.
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/services/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'User' object has no attribute 'profile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 188, in get_services
+    return Response(serializer.data)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `profile` on serializer `UserSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `User` instance.
+Original exception text was: 'User' object has no attribute 'profile'.
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 112, in user_profile
+    return Response(serializer.data)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "/home/ahmed/jupy/django_projects/src/django/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'user_id' was declared on serializer UserProfileSerializer, but has not been included in the 'fields' option.
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Unauthorized: /api/profile/user2/update/
+Internal Server Error: /api/profile/user2/update/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 133, in update_user_profile
+    return Response({'message': 'User profile updated successfully', 'user_id': serializer.data['user_id']})
+KeyError: 'user_id'
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/current_user/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 119, in user_data
+    user_data = User.objects.get(user=request.user)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 615, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 1438, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 1456, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 1463, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1498, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1529, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1379, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1189, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'user' into field. Choices are: auth_token, date_joined, email, first_name, groups, id, interest, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, service, user_permissions, username, userprofile
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/current_user/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 119, in user_data
+    user_data = User.objects.get(user=request.user.id)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 615, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 1438, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 1456, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 1463, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1498, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1529, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1379, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1189, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'user' into field. Choices are: auth_token, date_joined, email, first_name, groups, id, interest, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, service, user_permissions, username, userprofile
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /api/profile/user16/update/
+Bad Request: /api/profile/user16/update/
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/current_user/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 121, in user_data
+    return Response(serializer.data)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/serializers.py", line 21, in get_profile_picture_url
+    return request.build_absolute_uri(obj.profile_picture.url)
+AttributeError: 'NoneType' object has no attribute 'build_absolute_uri'
+Internal Server Error: /api/current_user/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 121, in user_data
+    return Response(serializer.data)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/serializers.py", line 21, in get_profile_picture_url
+    return request.build_absolute_uri(obj.profile_picture.url)
+AttributeError: 'NoneType' object has no attribute 'build_absolute_uri'
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /favicon.ico
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Bad Request: /api/profile/user16/update/
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+Internal Server Error: /api/profile/user16/update/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 145, in update_user_profile
+    return Response({'message': 'User profile updated successfully', 'user': serializer.data})
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/serializers.py", line 21, in get_profile_picture_url
+    return request.build_absolute_uri(obj.profile_picture.url)
+AttributeError: 'NoneType' object has no attribute 'build_absolute_uri'
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /api/current_user/
+Not Found: /api/services/
+Not Found: /api/current_user/
+Not Found: /api/services/
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /favicon.ico
+/home/ahmed/jupy/django_projects/apuankka/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8_HsmIpcX.jpeg
+/home/ahmed/jupy/django_projects/apuankka/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8_Io2LpxF.jpeg
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8_Io2LpxF.jpeg
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8_HsmIpcX.jpeg
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8_bLzEHOE.jpeg
+Watching for file changes with StatReloader
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8_bLzEHOE.jpeg
+STREAM b'IHDR' 16 13
+STREAM b'pHYs' 41 9
+STREAM b'IDAT' 62 8192
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+Not Found: /media/profile_pictures/provider-internet.png
+Not Found: /media/profile_pictures/provider-internet.png
+Not Found: /media/profile_pictures/provider-internet.png
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/provider-internet.png
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/provider-internet.png
+Not Found: /favicon.ico
+Watching for file changes with StatReloader
+Not Found: /media/profile_pictures/provider-internet.png
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/provider-internet.png
+Not Found: /favicon.ico
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /media/profile_pictures/provider-internet.png
+Not Found: /media/profile_pictures/provider-internet.png
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/provider-internet.png
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/provider-internet.png
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/provider-internet.png
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/provider-internet.png
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/provider-internet.png
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/provider-internet.png
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/provider-internet.png
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/provider-internet.png
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/provider-internet.png
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/provider-internet.png
+Not Found: /favicon.ico
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8_bLzEHOE.jpeg
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /media/profile_pictures/provider-internet.png
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /media/profile_pictures/provider-internet.png
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/apuankka/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+STREAM b'IHDR' 16 13
+STREAM b'pHYs' 41 9
+STREAM b'IDAT' 62 8192
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+STREAM b'IHDR' 16 13
+STREAM b'pHYs' 41 9
+STREAM b'IDAT' 62 8192
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/user2/update/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 140, in update_user_profile
+    if serializer.is_valid():
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 479, in to_internal_value
+    for field in fields:
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 362, in _writable_fields
+    for field in self.fields.values():
+  File "/home/ahmed/jupy/django_projects/src/django/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'profile_picture_url' was declared on serializer UserProfileSerializer, but has not been included in the 'fields' option.
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+STREAM b'IHDR' 16 13
+STREAM b'pHYs' 41 9
+STREAM b'IDAT' 62 8192
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+STREAM b'IHDR' 16 13
+STREAM b'pHYs' 41 9
+STREAM b'IDAT' 62 8192
+Watching for file changes with StatReloader
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+STREAM b'IHDR' 16 13
+STREAM b'pHYs' 41 9
+STREAM b'IDAT' 62 8192
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+Not Found: /media/profile_pictures/2d96345b-f800-47fe-832b-63feff7445a8.jpeg
+STREAM b'IHDR' 16 13
+STREAM b'pHYs' 41 9
+STREAM b'IDAT' 62 8192
+STREAM b'IHDR' 16 13
+STREAM b'pHYs' 41 9
+STREAM b'IDAT' 62 8192
+STREAM b'IHDR' 16 13
+STREAM b'pHYs' 41 9
+STREAM b'IDAT' 62 8192
+STREAM b'IHDR' 16 13
+STREAM b'pHYs' 41 9
+STREAM b'IDAT' 62 8192
+STREAM b'IHDR' 16 13
+STREAM b'pHYs' 41 9
+STREAM b'IDAT' 62 8192
+STREAM b'IHDR' 16 13
+STREAM b'pHYs' 41 9
+STREAM b'IDAT' 62 8192
+STREAM b'IHDR' 16 13
+STREAM b'pHYs' 41 9
+STREAM b'IDAT' 62 8192
+STREAM b'IHDR' 16 13
+STREAM b'pHYs' 41 9
+STREAM b'IDAT' 62 8192
+/home/ahmed/jupy/django_projects/apuankka/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /api/profile/user3/update/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.IntegrityError: (1062, "Duplicate entry '3' for key 'api_userprofile.user_id'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 142, in update_user_profile
+    serializer.save()
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 1006, in update
+    instance.save()
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 1807, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/compiler.py", line 1820, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '3' for key 'api_userprofile.user_id'")
+Unauthorized: /api/login/
+Unauthorized: /api/login/
+STREAM b'IHDR' 16 13
+STREAM b'pHYs' 41 9
+STREAM b'IDAT' 62 8192
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+Watching for file changes with StatReloader
+STREAM b'IHDR' 16 13
+STREAM b'pHYs' 41 9
+STREAM b'IDAT' 62 8192
+Importing BlpImagePlugin
+Importing BmpImagePlugin
+Importing BufrStubImagePlugin
+Importing CurImagePlugin
+Importing DcxImagePlugin
+Importing DdsImagePlugin
+Importing EpsImagePlugin
+Importing FitsImagePlugin
+Importing FliImagePlugin
+Importing FpxImagePlugin
+Image: failed to import FpxImagePlugin: No module named 'olefile'
+Importing FtexImagePlugin
+Importing GbrImagePlugin
+Importing GifImagePlugin
+Importing GribStubImagePlugin
+Importing Hdf5StubImagePlugin
+Importing IcnsImagePlugin
+Importing IcoImagePlugin
+Importing ImImagePlugin
+Importing ImtImagePlugin
+Importing IptcImagePlugin
+Importing JpegImagePlugin
+Importing Jpeg2KImagePlugin
+Importing McIdasImagePlugin
+Importing MicImagePlugin
+Image: failed to import MicImagePlugin: No module named 'olefile'
+Importing MpegImagePlugin
+Importing MpoImagePlugin
+Importing MspImagePlugin
+Importing PalmImagePlugin
+Importing PcdImagePlugin
+Importing PcxImagePlugin
+Importing PdfImagePlugin
+Importing PixarImagePlugin
+Importing PngImagePlugin
+Importing PpmImagePlugin
+Importing PsdImagePlugin
+Importing QoiImagePlugin
+Importing SgiImagePlugin
+Importing SpiderImagePlugin
+Importing SunImagePlugin
+Importing TgaImagePlugin
+Importing TiffImagePlugin
+Importing WebPImagePlugin
+Importing WmfImagePlugin
+Importing XbmImagePlugin
+Importing XpmImagePlugin
+Importing XVThumbImagePlugin
+Bad Request: /api/profile/user1/update/
+Bad Request: /api/profile/user1/update/
+STREAM b'IHDR' 16 13
+STREAM b'pHYs' 41 9
+STREAM b'IDAT' 62 8192
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /api/interests/service/undefined/check_interest
+Not Found: /api/interests/service/undefined/check_interest
+Not Found: /api/interests/service/undefined/check_interest
+Not Found: /api/interests/service/null/check_interest
+Not Found: /api/interests/service/null/check_interest
+Not Found: /api/interests/service/null/add
+Not Found: /api/interests/service/function () { [native code] }/check_interest
+Not Found: /api/interests/service/function () { [native code] }/check_interest
+Not Found: /api/interests/service/null/check_interest
+Not Found: /api/interests/service/undefined/check_interest
+Not Found: /api/interests/service/undefined/check_interest
+Not Found: /api/interests/service/undefined/check_interest
+Not Found: /api/interests/service/undefined/check_interest
+Watching for file changes with StatReloader
+Not Found: /api/interests/service/1/check_interest
+Not Found: /api/interests/service/3/check_interest
+Not Found: /api/interests/service/2/check_interest
+Not Found: /api/interests/service/1/check_interest
+Not Found: /api/interests/service/2/check_interest
+Not Found: /api/interests/service/3/check_interest
+Not Found: /api/interests/service/3/check_interest
+Not Found: /api/interests/service/3/check_interest
+Not Found: /api/interests/service/1/check_interest
+Not Found: /api/interests/service/3/check_interest
+Not Found: /api/interests/service/2/check_interest
+Not Found: /api/interests/service/1/check_interest
+Not Found: /api/interests/service/1/check_interest
+Not Found: /api/interests/service/1/check_interest
+Not Found: /api/interests/service/2/check_interest
+Not Found: /api/interests/service/3/check_interest
+Not Found: /api/interests/service/1/check_interest
+Not Found: /api/interests/service/2/check_interest
+Not Found: /api/interests/service/3/check_interest
+Not Found: /api/interests/service/1/check_interest
+Not Found: /api/interests/service/3/check_interest
+Not Found: /api/interests/service/2/check_interest
+Not Found: /api/interests/service/3/check_interest
+Not Found: /api/interests/service/2/check_interest
+Not Found: /api/interests/service/1/check_interest
+Not Found: /api/interests/service/3/check_interest
+Not Found: /api/interests/service/2/check_interest
+Not Found: /api/interests/service/1/check_interest
+Not Found: /api/interests/service/1/check_interest
+Not Found: /api/interests/service/3/check_interest
+Not Found: /api/interests/service/2/check_interest
+Bad Request: /api/interests/service/3/add/
+Internal Server Error: /api/interests/service/3/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 337, in get_service_interests
+    interests = Interest.objects.get(service_id=service_id)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 632, in get
+    raise self.model.MultipleObjectsReturned(
+api.models.Interest.MultipleObjectsReturned: get() returned more than one Interest -- it returned 6!
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/interests/service/3/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'QuerySet' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 339, in get_service_interests
+    return Response(serializer.data)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/relations.py", line 190, in get_attribute
+    return super().get_attribute(instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `InterestSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'user'.
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/interests/service/3/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'QuerySet' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 339, in get_service_interests
+    return Response(serializer.data)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `InterestSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'user'.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /api/interests/service/3/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'QuerySet' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 339, in get_service_interests
+    return Response(serializer.data)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `InterestSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'user'.
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/interests/service/3/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'QuerySet' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 339, in get_service_interests
+    return Response(serializer.data)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `InterestSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'user'.
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /api/interests/service/3/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'QuerySet' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 339, in get_service_interests
+    return Response(serializer.data)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `InterestSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'user'.
+Internal Server Error: /api/interests/service/3/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'QuerySet' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 339, in get_service_interests
+    return Response(serializer.data)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `InterestSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'user'.
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/interests/service/3/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'QuerySet' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 339, in get_service_interests
+    return Response(serializer.data)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `InterestSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'user'.
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/interests/service/3/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'QuerySet' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 339, in get_service_interests
+    return Response(serializer.data)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `InterestSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'user'.
+Watching for file changes with StatReloader
+Internal Server Error: /api/interests/service/3/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'QuerySet' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 339, in get_service_interests
+    return Response(serializer.data)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `InterestSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'user'.
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/interests/service/3/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'QuerySet' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 339, in get_service_interests
+    return Response(serializer.data)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `InterestSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'user'.
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/interests/service/3/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1799, in transform
+    return self.try_transform(wrapped, name)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1309, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup '*' for AutoField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 342, in get_service_interests
+    user_data = interests.values('user__*')  # Retrieve all fields from the User and related UserProfile model
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 1320, in values
+    clone = self._values(*fields, **expressions)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 1315, in _values
+    clone.query.set_values(fields)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 2412, in set_values
+    self.add_fields(field_names, True)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 2123, in add_fields
+    cols.append(join_info.transform_function(target, final_alias))
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1803, in transform
+    raise last_field_exception
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1776, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword '*' into field. Choices are: auth_token, date_joined, email, first_name, groups, id, interest, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, service, user_permissions, username, userprofile
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /api/interests/service/3/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1799, in transform
+    return self.try_transform(wrapped, name)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1309, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup '*' for AutoField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 342, in get_service_interests
+    user_data = interests.values('user__*')  # Retrieve all fields from the User and related UserProfile model
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 1320, in values
+    clone = self._values(*fields, **expressions)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 1315, in _values
+    clone.query.set_values(fields)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 2412, in set_values
+    self.add_fields(field_names, True)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 2123, in add_fields
+    cols.append(join_info.transform_function(target, final_alias))
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1803, in transform
+    raise last_field_exception
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1776, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword '*' into field. Choices are: auth_token, date_joined, email, first_name, groups, id, interest, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, service, user_permissions, username, userprofile
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/interests/service/3/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1799, in transform
+    return self.try_transform(wrapped, name)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1309, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup '*' for AutoField or join on the field not permitted.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 344, in get_service_interests
+    user_data = interests.values('user__*')
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 1320, in values
+    clone = self._values(*fields, **expressions)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/query.py", line 1315, in _values
+    clone.query.set_values(fields)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 2412, in set_values
+    self.add_fields(field_names, True)
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 2123, in add_fields
+    cols.append(join_info.transform_function(target, final_alias))
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1803, in transform
+    raise last_field_exception
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1776, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/sql/query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword '*' into field. Choices are: auth_token, date_joined, email, first_name, groups, id, interest, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, service, user_permissions, username, userprofile
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/interests/service/3/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 344, in get_service_interests
+    user_data = [
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 352, in <listcomp>
+    'id': interest.user.userprofile.id,
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/fields/related_descriptors.py", line 492, in __get__
+    raise self.RelatedObjectDoesNotExist(
+django.contrib.auth.models.User.userprofile.RelatedObjectDoesNotExist: User has no userprofile.
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/interests/service/3/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 344, in get_service_interests
+    user_data = [
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 352, in <listcomp>
+    'id': interest.user.userprofile.id,
+  File "/home/ahmed/jupy/django_projects/src/django/django/db/models/fields/related_descriptors.py", line 492, in __get__
+    raise self.RelatedObjectDoesNotExist(
+django.contrib.auth.models.User.userprofile.RelatedObjectDoesNotExist: User has no userprofile.
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/interests/service/3/
+Traceback (most recent call last):
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ahmed/jupy/django_projects/src/django/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/src/django/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/views.py", line 343, in get_service_interests
+    return Response(serializer.data)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/ahmed/jupy/django_projects/lib/python3.10/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+  File "/home/ahmed/jupy/django_projects/apuankka/api/serializers.py", line 25, in get_profile_picture_url
+    return request.build_absolute_uri(api_relative_url)
+AttributeError: 'NoneType' object has no attribute 'build_absolute_uri'
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
