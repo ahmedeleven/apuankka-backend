@@ -112,7 +112,7 @@ def protected_view(request):
 @permission_classes([IsAuthenticated])
 def user_profile(request):
     user_profile = UserProfile.objects.get(user=request.user)
-    serializer = UserProfileSerializer(user_profile)
+    serializer = UserProfileSerializer(user_profile, context={'request': request})
     return Response(serializer.data)
 
 
