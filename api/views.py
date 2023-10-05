@@ -299,8 +299,23 @@ def check_interest(request, service_id):
 
 
 
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def check_user_interest(request, service_id, user_id):
+    try:
+        interest = Interest.objects.get(service=service_id, user=user_id)
+        serializer = InterestSerializer(interest, context={'request': request})
+    except interest.DoesNotExist:
+        return Response({'error': 'This user is not interested in this service'}, status=status.HTTP_404_NOT_FOUND)
 
-'''@api_view(['PUT'])
+
+    return Response({'data': serializer.data})
+
+
+
+
+
+@api_view(['PUT'])
 @permission_classes([IsAuthenticated])
 def update_interest(request, service_id, user_id):
     try:
@@ -324,8 +339,8 @@ def update_interest(request, service_id, user_id):
         serializer = InterestSerializer(interest, data=request.data, partial=True, context={'request': request})
         if serializer.is_valid():
             serializer.save()
-            return Response({'message': serializer.data})
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)'''
+            return Response({'chosen': serializer.data['chosen']})
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 
@@ -345,6 +360,67 @@ def get_service_interests(request, service_id):
         return Response({"message": "You are not allowed to display interests of this service"})
 
 
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def count_services(request):
+
+    service_count = Service.objects.all().count()
+
+    # Return the count as a JSON response
+    data = {'service_count': service_count}
+    return Response(data)
+
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def count_available_services(request):
+
+    service_count = Service.objects.filter(status="open").count()
+
+    # Return the count as a JSON response
+    data = {'service_count': service_count}
+    return Response(data)
+
+
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def count_user_services(request, user_id):
+
+    service_count = Service.objects.filter(user=user_id).count()
+
+    # Return the count as a JSON response
+    data = {'service_count': service_count}
+    return Response(data)
+
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def count_user_interests(request, user_id):
+
+    # Count the interests related to the current user
+    interest_count = Interest.objects.filter(user=user_id).count()
+
+    # Return the count as a JSON response
+    data = {'interest_count': interest_count}
+    return Response(data)
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def count_chosen_interests(request ,user_id):
+
+    # Count the interests related to the current user where chosen=1
+    chosen_interest_count = Interest.objects.filter(user=user_id, chosen=True).count()
+
+    # Return the count as a JSON response
+    data = {'chosen_interest_count': chosen_interest_count}
+    return Response(data)
 
 
 

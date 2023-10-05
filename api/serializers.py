@@ -12,7 +12,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = UserProfile
-        fields = ('id','phone_number','full_name','profile_picture', 'profile_picture_url')
+        fields = ('id','phone_number','full_name','bio','profile_picture', 'profile_picture_url')
 
 
     def get_profile_picture_url(self, obj):
