@@ -195,9 +195,9 @@ def update_service(request, service_id):
 def get_services(request):
     status = request.query_params.get('status')
     if status:
-        services = Service.objects.filter(status=status)
+        services = Service.objects.filter(status=status).order_by('-id')
     else:
-        services = Service.objects.all()
+        services = Service.objects.all().order_by('-id')
     
     serializer = ServiceSerializer(services, many=True, context={'request': request})
     return Response(serializer.data)

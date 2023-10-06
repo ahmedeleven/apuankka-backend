@@ -37,17 +37,25 @@ class UserSerializer(serializers.ModelSerializer):
 
 class ServiceSerializer(serializers.ModelSerializer):
     #user = serializers.PrimaryKeyRelatedField(read_only=True, default=serializers.CurrentUserDefault())
-    user = UserSerializer()
+    user = UserSerializer(required=False)
 
     class Meta:
         model = Service
         fields = ('id','title','description','date','modified','fee','status','user')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        
+        # Check if this serializer is being used for an update
+        if self.instance:
+            self.fields['title'].required = False
 
     def create(self, validated_data):
         validated_data['user'] = self.context['request'].user
         validated_data['date'] = timezone.now().date()
         service = Service.objects.create(**validated_data)
         return service
+
 
 
 

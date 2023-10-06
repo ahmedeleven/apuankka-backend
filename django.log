@@ -7353,3 +7353,54 @@ Traceback (most recent call last):
 AttributeError: 'NoneType' object has no attribute 'build_absolute_uri'
 /home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Unauthorized: /api/login/
+Unauthorized: /api/login/
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /api/services/update/19/
+Watching for file changes with StatReloader
+Bad Request: /api/services/update/19/
+Bad Request: /api/services/update/19/
+Bad Request: /api/services/update/19/
+Bad Request: /api/services/update/19/
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Bad Request: /api/services/update/19/
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Bad Request: /api/services/update/19/
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /api/services/update/19/
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ahmed/jupy/django_projects/apuankka/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
