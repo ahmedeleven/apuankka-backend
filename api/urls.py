@@ -27,6 +27,7 @@ urlpatterns = [
 	path('interests/service/<int:service_id>/user/<int:user_id>/update/', views.update_interest, name='update_interest'),
 	path('interests/service/<int:service_id>/user/<int:user_id>/check/', views.check_user_interest, name='check_user_interest'),
 	path('interests/service/<int:service_id>/', views.get_service_interests, name='get_service_interests'),
+	path('interests/user/<int:user_id>/', views.get_user_interests, name='get_user_interests'),
 	path('interests/user/<int:user_id>/count/', views.count_user_interests, name='count_user_interests'),
 	path('interests/user/<int:user_id>/chosen/count/', views.count_user_interests, name='count_user_interests'),
 ]

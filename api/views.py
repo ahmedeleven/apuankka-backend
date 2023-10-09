@@ -425,5 +425,16 @@ def count_chosen_interests(request ,user_id):
 
 
 
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_user_interests(request, user_id):
+    interests = Interest.objects.filter(user=user_id)
+    
+    serializer = InterestSerializer(interests, many=True, context={'request': request})
+    return Response(serializer.data)
+
+
+
+
 
     
