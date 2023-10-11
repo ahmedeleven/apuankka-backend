@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.authtoken.models import Token
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.pagination import PageNumberPagination
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.http import HttpResponse
@@ -198,8 +199,15 @@ def get_services(request):
         services = Service.objects.filter(status=status).order_by('-id')
     else:
         services = Service.objects.all().order_by('-id')
+
+    # Create an instance of PageNumberPagination and set the page size
+    paginator = PageNumberPagination()
+    paginator.page_size = 10  # number of services per page
+
+    # Paginate the queryset
+    paginated_services = paginator.paginate_queryset(services, request)
     
-    serializer = ServiceSerializer(services, many=True, context={'request': request})
+    serializer = ServiceSerializer(paginated_services, many=True, context={'request': request})
     return Response(serializer.data)
 
 
@@ -217,11 +225,18 @@ def get_services_by_status(request, status):
 def get_user_services(request, user_id):
     status = request.query_params.get('status')
     if status:
-        services = Service.objects.filter(status=status, user=user_id)
+        services = Service.objects.filter(status=status, user=user_id).order_by('-id')
     else:
-        services = Service.objects.filter(user=user_id)
+        services = Service.objects.filter(user=user_id).order_by('-id')
+
+    # Create an instance of PageNumberPagination and set the page size
+    paginator = PageNumberPagination()
+    paginator.page_size = 10  # number of services per page
+
+    # Paginate the queryset
+    paginated_services = paginator.paginate_queryset(services, request)
     
-    serializer = ServiceSerializer(services, many=True, context={'request': request})
+    serializer = ServiceSerializer(paginated_services, many=True, context={'request': request})
     return Response(serializer.data)
 
 
@@ -428,9 +443,15 @@ def count_chosen_interests(request ,user_id):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_user_interests(request, user_id):
-    interests = Interest.objects.filter(user=user_id)
-    
-    serializer = InterestSerializer(interests, many=True, context={'request': request})
+    interests = Interest.objects.filter(user=user_id).order_by('-id')
+
+    # Create an instance of PageNumberPagination and set the page size
+    paginator = PageNumberPagination()
+    paginator.page_size = 10  # number of interests per page
+
+    # Paginate the queryset
+    paginated_interests = paginator.paginate_queryset(interests, request)
+    serializer = InterestSerializer(paginated_interests, many=True, context={'request': request})
     return Response(serializer.data)
 
 
