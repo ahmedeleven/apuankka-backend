@@ -7,7 +7,6 @@ from django.utils import timezone
 
 
 class UserProfileSerializer(serializers.ModelSerializer):
-    #user_id = serializers.ReadOnlyField(source='user.id')
     profile_picture_url = serializers.SerializerMethodField()
 
     class Meta:
@@ -36,7 +35,6 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class ServiceSerializer(serializers.ModelSerializer):
-    #user = serializers.PrimaryKeyRelatedField(read_only=True, default=serializers.CurrentUserDefault())
     user = UserSerializer(required=False)
 
     class Meta:

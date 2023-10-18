@@ -21,27 +21,28 @@ from django.utils import timezone
 
 from django.shortcuts import get_object_or_404
 
-#import requests
-
-# Create your views here.
 
 
 
-
-
+# A function registers a new user and returns token, user ID and username
 @api_view(['POST'])
 def register_user(request):
+    # Get 'username', 'password', and 'email' from the request data
     username = request.data.get('username')
     password = request.data.get('password')
     email = request.data.get('email')
 
+    # Check if 'username' and 'password' are provided, and return an error if not
     if not username or not password:
         return Response({'error': 'Username and password are required.'}, status=status.HTTP_400_BAD_REQUEST)
 
     try:
+        # Attempt to create a new user with the provided 'username', 'password', and 'email'
         user = User.objects.create_user(username=username, password=password, email=email)
+        # Create a user profile for the new user
         UserProfile.objects.create(user=user)
     except Exception as e:
+        # If there's an error during user creation, return an error response
         return Response({'error': str(e), 'username': username}, status=status.HTTP_400_BAD_REQUEST)
 
     # Get the user's ID and username
@@ -65,16 +66,19 @@ def register_user(request):
 
 
 
-
+# A function that authenticates the user and returns a token, user ID and username
 @api_view(['POST'])
 def login_user(request):
+    # Get the 'username' and 'password' from the request data
     username = request.data.get('username')
     password = request.data.get('password')
 
+    # Attempt to authenticate the user using the provided 'username' and 'password'
     user = authenticate(request, username=username, password=password)
 
+    # Check if user authentication was successful
     if user is not None:
-        # Authenticate the user
+        # Authenticate the user by creating a session
         login(request, user)
 
         # Get the user's ID and username
@@ -91,6 +95,7 @@ def login_user(request):
             'username': username
         }, status=status.HTTP_200_OK)
 
+    # If authentication failed, return an error response
     return Response({'error': 'Invalid credentials.'}, status=status.HTTP_401_UNAUTHORIZED)
 
 
@@ -102,34 +107,33 @@ def test_function(request):
 	return Response({'message': 'Hello!!'})
 
 
-'''@api_view(['GET'])
-@permission_classes([IsAuthenticated])
-def protected_view(request):
-    user = request.user
-    return Response({'message': f'Hello, {user.username}! This is a protected view.'})'''
 
-
+# A function that returns ONLY user profile data
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def user_profile(request):
+    # get user profile data for the current logged user
     user_profile = UserProfile.objects.get(user=request.user)
     serializer = UserProfileSerializer(user_profile, context={'request': request})
     return Response(serializer.data)
 
 
+# A function that returns current user data and profile data
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def user_data(request):
+    # get current user data and profile data
     user_data = User.objects.get(id=request.user.id)
     serializer = UserSerializer(user_data, context={'request': request})
     return Response(serializer.data)
 
 
-
+# A function to update user profile data
 @api_view(['PUT'])
 @permission_classes([IsAuthenticated])
 def update_user_profile(request, username):
     try:
+        # get user profile data for the username sent as a parameter
         user_profile = UserProfile.objects.get(user__username=username)
     except UserProfile.DoesNotExist:
         # If UserProfile doesn't exist, create it
@@ -141,10 +145,9 @@ def update_user_profile(request, username):
 
     serializer = UserProfileSerializer(user_profile, data=request.data, context={'request': request})
 
+    # Check if the serializer is valid, update the profile and return a success message
     if serializer.is_valid():
-
         serializer.save()
-
         return Response({'message': 'User profile updated successfully', 'user': serializer.data})
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -152,7 +155,7 @@ def update_user_profile(request, username):
 
 
 
-
+# A function to add a new service and returns the data of the new service
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def add_service(request):
@@ -166,13 +169,12 @@ def add_service(request):
 
 
 
-
+# A function to update the service
 @api_view(['PUT'])
 @permission_classes([IsAuthenticated])
 def update_service(request, service_id):
     try:
         service = Service.objects.get(id = service_id)
-        #return Response({'message': request.user.id})
     except Service.DoesNotExist:
         return Response({'error': 'Service does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
@@ -185,16 +187,17 @@ def update_service(request, service_id):
         serializer = ServiceSerializer(service, data=data, context={'request': request})
         if serializer.is_valid():
             serializer.save()
-            #return Response({'message': 'Service updated successfully'})
             return Response({'message': serializer.data})
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 
+# A function to retrieve services
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_services(request):
     status = request.query_params.get('status')
+    # Check if a status is sent as a parameter, filter by status, otherwise return all services
     if status:
         services = Service.objects.filter(status=status).order_by('-id')
     else:
@@ -219,7 +222,7 @@ def get_services_by_status(request, status):
     return Response(serializer.data)'''
 
 
-
+# A function to retrieve services for a specific user
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_user_services(request, user_id):
@@ -241,7 +244,7 @@ def get_user_services(request, user_id):
 
 
 
-
+# A function to retrieve a specific service
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_service(request, id):
@@ -252,7 +255,7 @@ def get_service(request, id):
 
 
 
-
+# A function to add interest for a specific service from the current user
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def add_interest(request, service_id):
@@ -261,6 +264,7 @@ def add_interest(request, service_id):
     except Service.DoesNotExist:
         return Response({'error': 'Service does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
+    # Display an error message if the logged-in user is the creator of the service.
     if service.user == request.user:
         return Response({"message":"You are not allowed to show interest to your own service"}, status=status.HTTP_400_BAD_REQUEST)
     else:
@@ -273,7 +277,7 @@ def add_interest(request, service_id):
 
 
 
-
+# Remove the interest from the user if they change their mind.
 @api_view(['DELETE'])
 @permission_classes([IsAuthenticated])
 def delete_interest(request, service_id):
@@ -292,7 +296,7 @@ def delete_interest(request, service_id):
 
 
 
-
+# A function to check if the logged user is interested in a specific service
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def check_interest(request, service_id):
@@ -313,7 +317,7 @@ def check_interest(request, service_id):
 
 
 
-
+# A function to check if a specific user is interested in a specific service
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def check_user_interest(request, service_id, user_id):
@@ -329,13 +333,13 @@ def check_user_interest(request, service_id, user_id):
 
 
 
-
+# A function to update interest data
+# Used to mark the service requester's choice by updating the 'chosen' field.
 @api_view(['PUT'])
 @permission_classes([IsAuthenticated])
 def update_interest(request, service_id, user_id):
     try:
         service = Service.objects.get(id=service_id)
-        #return Response({'id':service.id, 'user':service.user.id, 'logged':request.user.id, 'title': service.title})
     except Service.DoesNotExist:
         return Response({'error': 'Service does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
@@ -343,7 +347,6 @@ def update_interest(request, service_id, user_id):
 
     try:
         interest = Interest.objects.get(service_id=service_id,user_id=user_id)
-        #return Response({'user':interest.user.id, 'service':interest.service.id})
     except:
         return Response({'error': 'There is no interest with the user specified to the service specified'}, status=status.HTTP_404_NOT_FOUND)
 
@@ -361,7 +364,7 @@ def update_interest(request, service_id, user_id):
 
 
 
-
+# A function to return all interested users in a specific service
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_service_interests(request, service_id):
@@ -376,7 +379,7 @@ def get_service_interests(request, service_id):
 
 
 
-
+# A function to count all services
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def count_services(request):
@@ -389,6 +392,7 @@ def count_services(request):
 
 
 
+# A function to count available services
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def count_available_services(request):
@@ -401,7 +405,7 @@ def count_available_services(request):
 
 
 
-
+# A function to count a specific user requests
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def count_user_services(request, user_id):
@@ -413,7 +417,7 @@ def count_user_services(request, user_id):
     return Response(data)
 
 
-
+# A function to count all services a user is interested in
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def count_user_interests(request, user_id):
@@ -426,6 +430,7 @@ def count_user_interests(request, user_id):
     return Response(data)
 
 
+# A function to count all services a user was chosen to perform
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def count_chosen_interests(request ,user_id):
@@ -439,7 +444,7 @@ def count_chosen_interests(request ,user_id):
 
 
 
-
+# get all interests of a user
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_user_interests(request, user_id):
